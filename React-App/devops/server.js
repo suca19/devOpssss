@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser"); // Import du module body-parser
-const database = require('./devops/src/assets/db/database')
-const {add_student} = require("./devops/src/assets/db/database");
+const database = require('./src/assets/db/database')
+const {add_student} = require("./src/assets/db/database");
 const app = express();
 
 app.use(cors());

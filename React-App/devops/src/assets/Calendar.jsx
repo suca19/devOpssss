@@ -31,7 +31,7 @@ function Calendar() {
                     <img src={f32} alt="logo"/>
                     <h1>Dorset College<br/>Calendar</h1>
                 </div>
-                <a href="#">New Event</a>
+                <a href="/schedule-add">New Event</a>
                 <div className="course-box">
                     {courses.map((item)=>(
                         <div className="course">
@@ -43,7 +43,15 @@ function Calendar() {
             </div>
 
             <div className='right-section'>
-                <h1 className='mois'>{month}</h1>
+                <div className='c-topnav'>
+                    <h1 className='mois'>{month}</h1>
+                    <div className='c-nav'>
+                        <a href='./SubmitStu'>Assignments</a>
+                        <a href='./assignementPage'>List of Assignments</a>
+                        <a href='#'>2</a>
+                        <a href='#'>3</a>
+                    </div>
+                </div>
                 <div className="bar"></div>
                 <div className="grille">
                     {week.map((item)=>(
@@ -53,7 +61,7 @@ function Calendar() {
                     {days.map((item)=>(
                         item == 0 && <div className='caseJour' style={{
                             visibility: "hidden"}}></div> ||
-                        item == day && <div className='caseJour' style={{color: "red"}}>{item}</div> ||
+                        item == day && <div className='caseJour' style={{color: "yellow"}}>{item}</div> ||
                         <div className='caseJour'>{item}</div>
                     ))
                     }
